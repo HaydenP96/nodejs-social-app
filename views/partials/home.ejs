@@ -9,39 +9,7 @@
       </p>
     </div>
     <div class="col-md-10 mx-auto col-lg-5">
-      <form class="p-4 p-md-5 border rounded-3 bg-white shadow">
-        <div class="form-floating mb-3">
-          <input
-            type="email"
-            class="form-control"
-            id="floatingInput"
-            placeholder="name@example.com" />
-          <label for="floatingInput">Email address</label>
-        </div>
-        <div class="form-floating mb-3">
-          <input
-            type="password"
-            class="form-control"
-            id="floatingPassword"
-            placeholder="Password" />
-          <label for="floatingPassword">Password</label>
-        </div>
-
-        <button class="w-100 btn btn-lg btn-primary" type="submit">
-          Login
-        </button>
-        <div class="d-flex justify-content-center align-items-center my-2">
-          <a href="#" class="small text-decoration-none text-center w-100 mt-2"
-            >Forgot Password?</a
-          >
-        </div>
-        <hr class="mb-2" />
-        <div class="d-flex justify-content-center align-items center">
-          <a href="/register" class="btn btn-lg btn-success mt-3"
-            >Create new account</a
-          >
-        </div>
-      </form>
+      <%- include('forms/loginForm.ejs') %>
     </div>
   </div>
 </div>
