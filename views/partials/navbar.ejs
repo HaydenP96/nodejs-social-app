@@ -5,5 +5,26 @@
       class="d-flex align-items-center mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
       <span class="fs-2 text-primary">GoonSocial</span>
     </a>
+    <% if(user){ %>
+    <div class="dropdown">
+      <a
+        href="#"
+        class="align-items-end d-flex link-light text-decoration-none dropdown-toggle"
+        data-bs-toggle="dropdown"
+        aria-expanded="false">
+        <div
+          class="bg-primary rounded-circle border border-light shadow"
+          id="profileImg">
+          <%= user.firstName.charAt(0).toUpperCase() %>
+        </div>
+      </a>
+      <ul class="dropdown-menu dropdown-menu-end text-small mt-2 shadow">
+        <li><a class="dropdown-item" href="/post/new">New Post</a></li>
+
+        <li><hr class="dropdown-divider" /></li>
+        <li><a class="dropdown-item" href="/logout">Sign out</a></li>
+      </ul>
+    </div>
+    <% } %>
   </div>
 </nav>

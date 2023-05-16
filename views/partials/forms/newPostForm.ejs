@@ -1,0 +1,46 @@
+<form
+  class="p-4 p-md-5 border rounded-3 bg-white shadow"
+  autocomplete="off"
+  action="/post/new"
+  method="post">
+  <div class="row text-start">
+    <div class="col-sm">
+      <h2 class="card-title mb-1">New Post</h2>
+      <h6 class="card-subtitle text-body-secondary">
+        Let your fellow <span class="text-primary">Goons</span> know what's
+        good.
+      </h6>
+    </div>
+  </div>
+  <hr />
+  <div class="row mt-3">
+    <div class="col-sm">
+      <div class="form-floating mb-3">
+        <input
+          required
+          type="text"
+          class="form-control shadow-sm"
+          name="postTitle"
+          id="postTitle"
+          placeholder="Title" />
+        <label for="postTitle" class="text-muted">Title</label>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="mb-3">
+      <textarea
+        placeholder="Description"
+        class="form-control shadow-sm"
+        id="postDescription"
+        name="postDescription"
+        rows="8"></textarea>
+    </div>
+  </div>
+  <div class="row mt-2">
+    <div class="col-sm d-flex gap-3 justify-content-center">
+      <a href="/" class="btn btn-secondary w-25">Cancel</a>
+      <button class="btn btn-primary w-25" type="submit">Post</button>
+    </div>
+  </div>
+</form>

@@ -1,4 +1,8 @@
-<form class="p-4 p-md-5 border rounded-3 bg-white shadow" autocomplete="off">
+<form
+  class="p-4 p-md-5 border rounded-3 bg-white shadow"
+  autocomplete="off"
+  action="/register"
+  method="post">
   <div class="row text-start">
     <div class="col-sm">
       <h2 class="card-title mb-1">Sign Up</h2>
@@ -40,7 +44,7 @@
         <input
           required
           type="email"
-          class="form-control shadow-sm"
+          class="form-control shadow-sm <%= message.emailExists ? 'is-invalid' : '' %>"
           name="email"
           id="email"
           placeholder="Email Address" />
@@ -55,7 +59,7 @@
         <input
           required
           type="password"
-          class="form-control shadow-sm"
+          class="form-control shadow-sm <%= message.error ? 'is-invalid' : '' %>"
           name="password"
           id="password"
           placeholder="Password" />
@@ -68,7 +72,7 @@
         <input
           required
           type="password"
-          class="form-control shadow-sm"
+          class="form-control shadow-sm <%= message.error ? 'is-invalid' : '' %>"
           name="passwordConfirm"
           id="passwordConfirm"
           placeholder="Confirm Password" />

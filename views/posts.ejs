@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('partials/head', {title: title}) %>
+  <body class="bg-light">
+    <%- include('partials/navbar'), {user: user} %>
+    <div class="container mt-4">
+      <% posts.forEach((post)=> { %>
+      <div class="card my-2">
+        <div class="card-body">
+          <h1 class="card-title"><%= post.title %></h1>
+          <p class="card-text"><%= post.description %></p>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+  </body>
+</html>

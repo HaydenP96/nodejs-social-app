@@ -2,6 +2,7 @@
 <html lang="en">
   <%- include('partials/head', {title: title}) %>
   <body class="bg-light">
-    <%- include('partials/navbar') %> <%- include('partials/home') %>
+    <%- include('partials/navbar', {user: user}) %> <%- include('partials/home',
+    {message: message}) %>
   </body>
 </html>
