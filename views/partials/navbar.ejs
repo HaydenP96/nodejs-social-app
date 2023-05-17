@@ -1,30 +1,39 @@
-<nav class="navbar navbar-expand-lg shadow-sm bg-dark">
-  <div class="container align-items-center p-2">
+<nav
+  class="navbar navbar-expand navbar-light shadow-sm bg-white topbar mb-4 static-top">
+  <div class="container align-items-center">
     <a
       href="/"
       class="d-flex align-items-center mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-      <span class="fs-2 text-primary">GoonSocial</span>
+      <span class="fs-2 fw-bold text-primary">GoonSocial</span>
     </a>
     <% if(user){ %>
-    <div class="dropdown">
-      <a
-        href="#"
-        class="align-items-end d-flex link-light text-decoration-none dropdown-toggle"
-        data-bs-toggle="dropdown"
-        aria-expanded="false">
+    <ul class="navbar-nav ml-auto">
+      <li class="dropdown nav-item no-arrow">
+        <a
+          class="nav-link dropdown-toggle d-flex gap-2 align-items-center"
+          href="#"
+          id="userDropdown"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false">
+          <span class="mr-2 d-none d-lg-inline text-gray-600 small"
+            ><%= user.firstName %> <%= user.lastName %></span
+          >
+          <div class="d-flex rounded-circle border bg-light" id="profileImg">
+            <img class="profileImg" src="images/profile.png" alt="" />
+          </div>
+        </a>
         <div
-          class="bg-primary rounded-circle border border-light shadow"
-          id="profileImg">
-          <%= user.firstName.charAt(0).toUpperCase() %>
-        </div>
-      </a>
-      <ul class="dropdown-menu dropdown-menu-end text-small mt-2 shadow">
-        <li><a class="dropdown-item" href="/post/new">New Post</a></li>
+          class="dropdown-menu mt-3 dropdown-menu-end shadow animated--grow-in"
+          aria-labelledby="userDropdown">
+          <a class="dropdown-item" href="/new"> New Post </a>
 
-        <li><hr class="dropdown-divider" /></li>
-        <li><a class="dropdown-item" href="/logout">Sign out</a></li>
-      </ul>
-    </div>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/logout"> Logout </a>
+        </div>
+      </li>
+    </ul>
     <% } %>
   </div>
 </nav>

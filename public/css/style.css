@@ -1,11 +1,15 @@
 #profileImg {
   height: 50px;
   width: 50px;
-  border-radius: 50%;
   background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
   font-size: 2rem;
+}
+
+.profileImg {
+  height: 50px;
+  width: 50px;
 }

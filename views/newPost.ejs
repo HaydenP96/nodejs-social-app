@@ -3,11 +3,9 @@
   <%- include('partials/head', {title: title}) %>
   <body class="bg-light">
     <%- include('partials/navbar', {user: user}) %>
-    <div class="container col-xl-10 col-xxl-8 px-4 py-5">
-      <div class="row align-items-center g-lg-5 py-5">
-        <div class="col-lg-8 mx-auto col-lg-5">
-          <%- include('partials/forms/newPostForm', {message: message}) %>
-        </div>
+    <div class="container mt-4">
+      <div class="col-lg-8 mx-auto col-lg-5">
+        <%- include('partials/forms/newPostForm', {message: message}) %>
       </div>
     </div>
   </body>

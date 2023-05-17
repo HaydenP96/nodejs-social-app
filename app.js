@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
 const passport = require('passport');
+const path = require('path');
 
 require('dotenv').config();
 
@@ -16,7 +17,7 @@ const { isAuth } = require('./utils/auth');
 const app = express();
 
 app.set('view engine', 'ejs');
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 app.use(cookieParser('kdskds'));
 app.use(flash());
@@ -51,4 +52,4 @@ app.get('/logout', (req, res, next) => {
 app.use(routes);
 app.use(postRoutes);
 
-app.listen(3000);
+app.listen(8080);
